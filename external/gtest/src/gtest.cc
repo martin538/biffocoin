@@ -1893,7 +1893,7 @@ Test::Test()
 }
 
 // The d'tor restores the values of all Google Test flags.
-Test::~Test() {
+Test::~Test() noexcept(false) {
   delete gtest_flag_saver_;
 }
 
